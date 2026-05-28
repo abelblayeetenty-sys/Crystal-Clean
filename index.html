@@ -1,0 +1,249 @@
+export default function CrystalCleanWebsite() {
+  const services = [
+    "Home Cleaning",
+    "Office Cleaning",
+    "Deep Cleaning",
+    "Move-In / Move-Out Cleaning",
+    "Window Cleaning",
+    "Sanitization Services",
+  ];
+
+  const reviews = [
+    {
+      name: "Sarah K.",
+      review:
+        "Crystal Clean transformed my home. Their team was professional and very detailed.",
+    },
+    {
+      name: "David M.",
+      review:
+        "Excellent office cleaning service. Highly recommended for businesses.",
+    },
+    {
+      name: "Grace T.",
+      review:
+        "Fast, reliable, and affordable. I’ll definitely book again.",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-white text-gray-800">
+      {/* Header */}
+      <header className="bg-blue-700 text-white shadow-lg sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <h1 className="text-2xl font-bold">Crystal Clean</h1>
+
+          <nav className="hidden md:flex gap-6 text-sm font-medium">
+            <a href="#home" className="hover:text-blue-200">Home</a>
+            <a href="#about" className="hover:text-blue-200">About</a>
+            <a href="#services" className="hover:text-blue-200">Services</a>
+            <a href="#contact" className="hover:text-blue-200">Contact</a>
+          </nav>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section
+        id="home"
+        className="bg-gradient-to-r from-blue-700 to-blue-500 text-white py-24 px-6"
+      >
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h2 className="text-5xl font-extrabold leading-tight mb-6">
+              Professional Cleaning Services For Homes & Offices
+            </h2>
+            <p className="text-lg text-blue-100 mb-8">
+              Crystal Clean provides trusted and high-quality cleaning solutions to keep your environment fresh, clean, and comfortable.
+            </p>
+
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="#contact"
+                className="bg-white text-blue-700 px-6 py-3 rounded-2xl font-semibold shadow hover:scale-105 transition"
+              >
+                Book Now
+              </a>
+
+              <a
+                href="https://wa.me/231889347351"
+                target="_blank"
+                rel="noreferrer"
+                className="border border-white px-6 py-3 rounded-2xl font-semibold hover:bg-white hover:text-blue-700 transition"
+              >
+                WhatsApp Us
+              </a>
+            </div>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 shadow-2xl">
+            <div className="aspect-video rounded-2xl border border-white/30 flex flex-col items-center justify-center text-center text-blue-100 p-6">
+              <div className="text-6xl mb-4">🧼</div>
+              <h3 className="text-2xl font-bold mb-2">Crystal Clean</h3>
+              <p className="text-blue-100">
+                Trusted professional cleaning services for homes and offices.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About */}
+      <section id="about" className="py-20 px-6 bg-gray-50">
+        <div className="max-w-5xl mx-auto text-center">
+          <h3 className="text-4xl font-bold text-blue-700 mb-6">About Us</h3>
+          <p className="text-lg leading-8 text-gray-600">
+            Crystal Clean is dedicated to providing excellent cleaning services for homes and offices. Our mission is to create cleaner, healthier, and more comfortable spaces for our clients. We focus on professionalism, quality service, and customer satisfaction.
+          </p>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section id="services" className="py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-14">
+            <h3 className="text-4xl font-bold text-blue-700 mb-4">Our Services</h3>
+            <p className="text-gray-600 text-lg">
+              We provide reliable cleaning solutions tailored to your needs.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-3xl shadow-lg p-8 border hover:-translate-y-2 transition"
+              >
+                <div className="w-14 h-14 rounded-2xl bg-blue-100 text-blue-700 flex items-center justify-center text-2xl mb-5">
+                  ✨
+                </div>
+                <h4 className="text-2xl font-semibold mb-3">{service}</h4>
+                <p className="text-gray-600">
+                  High-quality and professional cleaning services designed to keep your environment spotless.
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Booking Section */}
+      <section className="bg-blue-700 text-white py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-4xl font-bold mb-6">Easy Booking System</h3>
+          <p className="text-blue-100 text-lg mb-8">
+            Book your cleaning service quickly by contacting us through the form below or directly on WhatsApp.
+          </p>
+
+          <a
+            href="https://wa.me/231889347351"
+            target="_blank"
+            rel="noreferrer"
+            className="bg-white text-blue-700 px-8 py-4 rounded-2xl font-bold shadow-lg hover:scale-105 transition inline-block"
+          >
+            Book on WhatsApp
+          </a>
+        </div>
+      </section>
+
+      {/* Reviews */}
+      <section className="py-20 px-6 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-14">
+            <h3 className="text-4xl font-bold text-blue-700 mb-4">
+              Customer Reviews
+            </h3>
+            <p className="text-gray-600 text-lg">
+              Here’s what our customers say about our services.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {reviews.map((review, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-3xl shadow-lg p-8"
+              >
+                <div className="text-yellow-500 text-xl mb-4">★★★★★</div>
+                <p className="text-gray-600 mb-6">“{review.review}”</p>
+                <h4 className="font-bold text-blue-700">{review.name}</h4>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="py-20 px-6">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
+          <div>
+            <h3 className="text-4xl font-bold text-blue-700 mb-6">
+              Contact Us
+            </h3>
+
+            <div className="space-y-5 text-lg text-gray-700">
+              <p>
+                <strong>Phone / WhatsApp:</strong> 0889347351
+              </p>
+              <p>
+                <strong>Email:</strong> abelblayeetenty@gmail.com
+              </p>
+            </div>
+          </div>
+
+          <form className="bg-white shadow-xl rounded-3xl p-8 border space-y-5">
+            <input
+              type="text"
+              placeholder="Your Name"
+              className="w-full border rounded-2xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-400"
+            />
+
+            <input
+              type="email"
+              placeholder="Your Email"
+              className="w-full border rounded-2xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-400"
+            />
+
+            <textarea
+              rows="5"
+              placeholder="Tell us what cleaning service you need"
+              className="w-full border rounded-2xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-400"
+            ></textarea>
+
+            <button
+              type="submit"
+              className="w-full bg-blue-700 text-white py-3 rounded-2xl font-semibold hover:bg-blue-800 transition"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-gray-300 py-8 px-6">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+          <p>© 2026 Crystal Clean. All rights reserved.</p>
+
+          <a
+            href="https://wa.me/231889347351"
+            target="_blank"
+            rel="noreferrer"
+            className="text-blue-400 hover:text-blue-300"
+          >
+            Chat on WhatsApp
+          </a>
+        </div>
+      </footer>
+
+      {/* Floating WhatsApp Button */}
+      <a
+        href="https://wa.me/231889347351"
+        target="_blank"
+        rel="noreferrer"
+        className="fixed bottom-6 right-6 bg-green-500 text-white px-5 py-4 rounded-full shadow-2xl font-bold hover:scale-110 transition"
+      >
+        WhatsApp
+      </a>
+    </div>
+  );
+}
